@@ -48,7 +48,7 @@ python overtaking_analyzer_cli.py --help
 #### Minimal
 For minimal analysis with default values run
 ```bash
-python overtaking_analyzer_cli.py --trajectory-file /path/to/trajectories.csv
+python overtaking_analyzer_cli.py --trajectory-file /path/to/trajectories.csv --out-dir /path/to/output/directory
 ```
 
 
