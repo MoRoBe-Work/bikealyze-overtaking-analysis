@@ -6,8 +6,8 @@ The code in this repository was written by Moritz Beeking and Marvin Götze whil
 It's published under the Apache 2.0 License.
 This software is provided “as is,” without warranties or conditions of any kind, express or implied, and comes with no guarantee of correctness, fitness for a particular purpose, security, or suitability for any use.
 
-[^1] Salzburg Research
-[^2] TU Delft
+[^1]: Salzburg Research
+[^2]: TU Delft
 
 ## Installation
 The analysis is normally called via its command line interface (CLI).
