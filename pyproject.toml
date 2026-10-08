@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bikealyze-overtaking-analysis"
+version = "0.1.0"
+description = "Analysis of overtaking manoeuvres from sensor bike data"
+requires-python = ">=3.11"
+authors = [
+    { name = "Moritz Beeking", email = "moritz.beeking@salzburgresearch.at" },
+    { name = "Marvin Götze", email = "marvin.goetze@salzburgresearch.at" },
+]
+license = "Apache-2.0"
+
+dependencies = [
+    "geopandas>=1.1",
+    "numpy>=2.5",
+    "pandas>=2.3",
+    "pydantic>=2.13",
+    "scipy>=1.18",
+    "shapely>=2.1",
+    "toml>=0.10",
+    "typer>=0.27",
+]
+
+[project.scripts]
+overtaking_analysis = "overtaking_analysis_cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

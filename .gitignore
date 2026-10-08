@@ -1,0 +1,29 @@
+# Poetry virtual environment
+.venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# pip wheel cache and distribution
+*.egg-info/
+dist/
+build/
+
+# pyenv local version file
+.python-version
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VSCode settings (optional, but common)
+.vscode/
+
+# Misc
+.env
+.idea
