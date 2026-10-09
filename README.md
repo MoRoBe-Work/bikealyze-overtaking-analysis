@@ -10,10 +10,8 @@ This software is provided “as is,” without warranties or conditions of any k
 [^2]: TU Delft
 
 ## Installation
-The analysis is normally called via its command line interface (CLI).
-Therefore, installation is optional, but handles the project's dependencies for you.
-In the repository root directory run `pip install .`.
 We recommend using a virtual environment for this.
+In the repository root directory run `pip install .`.
 Using pip's `-e` flag, you may change the code and use the new version without installation.
 
 ## Dependencies
@@ -28,24 +26,18 @@ However, on some systems, manual installation of some of these libraries may be 
 See GeoPandas installation instructions for further details.
 
 ## Usage
-
+The analysis is normally called via its command line interface (CLI).
 To run the analysis, using the terminal of your choice switch into the `src/overtaking-analysis/` directory.
 There, run
 
 ```bash
-python overtaking_analyzer_cli.py --params
-```
-
-to run the analysis with the params of your choice.
-See the section on CLI parameters below for a concise overview of relevant parameters.
-
-### Usage examples
-To get a complete list of available parameters run
-```bash
 python overtaking_analyzer_cli.py --help
 ```
 
-#### Minimal
+to get a complete list of available parameters
+See the section on CLI parameters below for a concise overview of relevant parameters.
+
+### Usage example
 For minimal analysis with default values run
 ```bash
 python overtaking_analyzer_cli.py --trajectory-file /path/to/trajectories.csv --out-dir /path/to/output/directory
