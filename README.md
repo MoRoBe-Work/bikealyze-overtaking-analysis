@@ -11,7 +11,8 @@ This software is provided “as is,” without warranties or conditions of any k
 
 ## Installation
 We recommend using a virtual environment for this.
-In the repository root directory run `pip install .`.
+In the repository root directory run `pip install .`
+
 Using pip's `-e` flag, you may change the code and use the new version without installation.
 
 ## Dependencies
