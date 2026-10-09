@@ -3,7 +3,7 @@ from logging import WARNING, Logger
 from os import R_OK, access
 from pathlib import Path
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, model_validator, field_validator
 
 
 def is_readable_csv(file_path: str | Path) -> bool:
@@ -40,6 +40,15 @@ class LoggingConfig(BaseModel):
                                 "WARNING, ERROR, CRITICAL)")
     logfile: str | None = Field(None, description="Path to a logfile")
     cons_log: bool = Field(True, description="Whether to log to console")
+
+    @field_validator("logging_level", mode="before")
+    def parse_logging_level(cls, value: str | int) -> int:
+        if isinstance(value, str):
+            level = logging.getLevelName(value.upper())
+            if not isinstance(level, int):
+                raise ValueError(f"Invalid logging level: {value}")
+            return level
+        return value
 
 
 class BicycleConfig(BaseModel):

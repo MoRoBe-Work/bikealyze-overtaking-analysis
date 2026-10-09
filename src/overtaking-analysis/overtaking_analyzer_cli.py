@@ -49,11 +49,9 @@ def main() -> None:
 def analyze(
     ctx: typer.Context,
     # Logging options
-    logging_level: str | None = typer.Option(
-        default=configuration.LoggingConfig.model_fields['logging_level'].default,
+    logging_level: str | None = typer.Option(None,
         help=configuration.LoggingConfig.model_fields['logging_level'].description),
-    cons_log: bool = typer.Option(
-        default=configuration.LoggingConfig.model_fields['cons_log'].default,
+    cons_log: bool = typer.Option(None,
         help=configuration.LoggingConfig.model_fields['cons_log'].description),
     logfile: str | None = typer.Option(None,
         help=configuration.LoggingConfig.model_fields['logfile'].description),
@@ -65,16 +63,13 @@ def analyze(
     # Trajectory Handler options
 
     # Bicycle Polygon options
-    fan_width: float | None = typer.Option(
-        default=configuration.BicyclePolygonConfig.model_fields['fan_width'].default,
+    fan_width: float | None = typer.Option(None,
         help=configuration.BicyclePolygonConfig.model_fields['fan_width'].description),
 
     # SSM calculation options
-    oncoming_pet_thresh: float | None = typer.Option(
-        default=configuration.SSMConfig.model_fields['oncoming_pet_thresh'].default,
+    oncoming_pet_thresh: float | None = typer.Option(None,
         help=configuration.SSMConfig.model_fields['oncoming_pet_thresh'].description),
-    tsf_speed_thresh: float | None = typer.Option(
-        default=configuration.SSMConfig.model_fields['tsf_speed_thresh'].default,
+    tsf_speed_thresh: float | None = typer.Option(None,
         help=configuration.SSMConfig.model_fields['tsf_speed_thresh'].description),
 
     # Process control options
